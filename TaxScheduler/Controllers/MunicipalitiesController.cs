@@ -29,14 +29,14 @@ namespace TaxScheduler.Controllers
 		[Route("")]
 		public HttpResponseMessage Get([FromUri] MunicipalityFilter filter, [FromUri]PaginationModel pagination)
 		{
-			var mubicipalityFilter = filter == null
+			var municipalityFilter = filter == null
 				? null
 				: new MunicipalityFilter
 				{
 					Name = filter.Name
 				};
 			pagination = pagination ?? new PaginationModel();
-			return Request.CreateResponse(HttpStatusCode.OK, _municipalityService.Get(mubicipalityFilter, pagination.PageNumber, pagination.PageSize));
+			return Request.CreateResponse(HttpStatusCode.OK, _municipalityService.Get(municipalityFilter, pagination.PageNumber, pagination.PageSize));
 		}
 	}
 }

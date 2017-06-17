@@ -10,7 +10,7 @@ namespace TaxScheduler.DataAccess.Repositories
 		/// Get all municipalities
 		/// </summary>
 		/// <returns></returns>
-		IQueryable<Municipality> Get(PaginationModel pagination);
+		IQueryable<Municipality> Get();
 
 		/// <summary>
 		/// Get municipality by ID

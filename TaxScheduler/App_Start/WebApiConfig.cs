@@ -6,6 +6,7 @@ using SimpleInjector.Integration.WebApi;
 using TaxScheduler.DataAccess;
 using TaxScheduler.DataAccess.Repositories;
 using TaxScheduler.Services.Municipality;
+using TaxScheduler.Services.Tax;
 
 namespace TaxScheduler
 {
@@ -21,6 +22,9 @@ namespace TaxScheduler
 
 			container.Register<IMunicipalityRepository, MunicipalityRepository>(Lifestyle.Scoped);
 			container.Register<IMunicipalityService, MunicipalityService>(Lifestyle.Scoped);
+
+			container.Register<ITaxRepository, TaxRepository>(Lifestyle.Scoped);
+			container.Register<ITaxService, TaxService>(Lifestyle.Scoped);
 
 			container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
 			container.Verify();

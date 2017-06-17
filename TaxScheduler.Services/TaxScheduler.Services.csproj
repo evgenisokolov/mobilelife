@@ -63,11 +63,20 @@
     <Compile Include="Municipality\MunicipalityMappingExtensions.cs" />
     <Compile Include="Municipality\MunicipalityService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tax\ITaxService.cs" />
+    <Compile Include="Tax\Tax.cs" />
+    <Compile Include="Tax\TaxFilter.cs" />
+    <Compile Include="Tax\TaxMappingExtensions.cs" />
+    <Compile Include="Tax\TaxService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TaxScheduler.DataAccess\TaxScheduler.DataAccess.csproj">
       <Project>{a7a48d39-82ec-484e-993a-042450f29716}</Project>
       <Name>TaxScheduler.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaxScheduler.Infrastructure.EntityFramework\TaxScheduler.Infrastructure.EntityFramework.csproj">
+      <Project>{08AD0F62-0637-48BA-BCDC-8B7E68756A41}</Project>
+      <Name>TaxScheduler.Infrastructure.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\TaxScheduler.Infrastructure\TaxScheduler.Infrastructure.csproj">
       <Project>{909313fd-bc20-44b3-99c7-083eac950d0b}</Project>

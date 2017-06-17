@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TaxScheduler.DataAccess;
 using TaxScheduler.DataAccess.Repositories;
+using TaxScheduler.Infrastructure.EntityFramework.Extensions;
 
 namespace TaxScheduler.Services.Municipality
 {
@@ -32,12 +32,12 @@ namespace TaxScheduler.Services.Municipality
 		/// <returns></returns>
 		public IEnumerable<Municipality> Get(MunicipalityFilter filter, int pagenumber, int pagesize)
 		{
-			var query = _municipalityRepository.Get(new PaginationModel(pagesize, pagenumber));
+			var query = _municipalityRepository.Get();
 			if (filter != null && !String.IsNullOrEmpty(filter.Name))
 			{
 				query = query.Where(m => m.Name.StartsWith(filter.Name));
 			}
-			query = query.OrderBy(m => m.Name);
+			query = query.OrderBy(m => m.Name).GetPage(pagenumber, pagesize);
 			return query.ToList().Select(m=>m.Map());
 		}
 	}

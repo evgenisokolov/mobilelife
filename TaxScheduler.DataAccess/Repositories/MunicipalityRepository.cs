@@ -21,14 +21,10 @@ namespace TaxScheduler.DataAccess.Repositories
 		/// Get all municipalities
 		/// </summary>
 		/// <returns></returns>
-		public IQueryable<Municipality> Get(PaginationModel pagination)
+		public IQueryable<Municipality> Get()
 		{
 
 			var query = Context.Municipalities.Active();
-			if (pagination != null)
-			{
-				query = query.GetPage(pagination.PageNumber, pagination.PageSize);
-			}
 			return query;
 		}
 
