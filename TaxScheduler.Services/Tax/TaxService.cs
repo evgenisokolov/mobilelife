@@ -66,9 +66,10 @@ namespace TaxScheduler.Services.Tax
 		/// <returns></returns>
 		public Tax GetAppliedTax(Guid municipalityId, DateTime date)
 		{
+			date = date.Date; // get rid of seconds
 			//check if munipality exists and active (exception will be thrown in case it's not)
 			_municipalityRepository.Get(municipalityId);
-
+			
 			//get tax for chhosen date with highest priority
 			return _taxRepository.Get()
 				.Where(t => t.MunicipalityId == municipalityId && t.StartDate <= date && t.EndDate > date)
@@ -85,7 +86,15 @@ namespace TaxScheduler.Services.Tax
 			//check if munipality exists and active (exception will be thrown in case it's not)
 			_municipalityRepository.Get(tax.MunicipalityId);
 
+
 			tax.Id = Guid.NewGuid();
+			tax.Date = tax.Date.Date; //get rid of seconds
+
+			if (_taxRepository.Get()
+					.Any(t => t.MunicipalityId == tax.MunicipalityId && t.StartDate == tax.Date && t.Type == tax.Type))
+			{
+				throw new ArgumentException($"Tax with a type {tax.Type} is already exists on {tax.Date} in municipality {tax.MunicipalityId}");
+			}
 
 			_taxRepository.Create(tax.Map());
 
@@ -96,8 +105,12 @@ namespace TaxScheduler.Services.Tax
 		/// Delete tax by ID
 		/// </summary>
 		/// <param name="id"></param>
-		public void DeleteTax(Guid id)
+		/// <param name="municipalityId"></param>
+		public void DeleteTax(Guid id, Guid municipalityId)
 		{
+			//check if munipality exists and active (exception will be thrown in case it's not)
+			_municipalityRepository.Get(municipalityId);
+
 			_taxRepository.Delete(id);
 		}
 	}

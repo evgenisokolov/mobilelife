@@ -40,6 +40,6 @@ namespace TaxScheduler.Services.Tax
 		/// Delete tax by ID
 		/// </summary>
 		/// <param name="id"></param>
-		void DeleteTax(Guid id);
+		void DeleteTax(Guid id, Guid municipalityId);
 	}
 }

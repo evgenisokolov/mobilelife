@@ -50,7 +50,7 @@ namespace TaxScheduler.DataAccess.Migrations
 				Amount = 0.1,
 				Type = ScheduleType.Yearly,
 				StartDate = DateTime.Parse("1/1/2016"),
-				EndDate = DateTime.Parse("31/12/2016"),
+				EndDate = DateTime.Parse("1/1/2017"),
 				MunicipalityId = Guid.Parse("44c6e110-159c-46ee-a7af-e17cd9752ac1"),
 				Created = DateTime.Parse("17/6/2017")
 			};
@@ -60,7 +60,7 @@ namespace TaxScheduler.DataAccess.Migrations
 				Amount = 0.4,
 				Type = ScheduleType.Montly,
 				StartDate = DateTime.Parse("1/5/2016"),
-				EndDate = DateTime.Parse("31/5/2016"),
+				EndDate = DateTime.Parse("1/6/2016"),
 				MunicipalityId = Guid.Parse("44c6e110-159c-46ee-a7af-e17cd9752ac1"),
 				Created = DateTime.Parse("17/6/2017")
 			};
@@ -71,7 +71,7 @@ namespace TaxScheduler.DataAccess.Migrations
 				Amount = 0.1,
 				Type = ScheduleType.Daily,
 				StartDate = DateTime.Parse("1/1/2016"),
-				EndDate = DateTime.Parse("1/1/2016"),
+				EndDate = DateTime.Parse("2/1/2016"),
 				MunicipalityId = Guid.Parse("44c6e110-159c-46ee-a7af-e17cd9752ac1"),
 				Created = DateTime.Parse("17/6/2017")
 			};
@@ -81,7 +81,7 @@ namespace TaxScheduler.DataAccess.Migrations
 				Amount = 0.1,
 				Type = ScheduleType.Daily,
 				StartDate = DateTime.Parse("25/12/2016"),
-				EndDate = DateTime.Parse("25/12/2016"),
+				EndDate = DateTime.Parse("26/12/2016"),
 				MunicipalityId = Guid.Parse("2a8cbe9e-56b8-4b11-8672-8087f71e4228"),
 				Created = DateTime.Parse("17/6/2017")
 			};
@@ -90,9 +90,9 @@ namespace TaxScheduler.DataAccess.Migrations
 			{
 				Id = Guid.Parse("cf261f73-2291-43ef-835f-44b7acae3043"),
 				Amount = 0.5,
-				Type = ScheduleType.Daily,
+				Type = ScheduleType.Weekly,
 				StartDate = DateTime.Parse("14/1/2016"),
-				EndDate = DateTime.Parse("14/1/2016"),
+				EndDate = DateTime.Parse("22/1/2016"),
 				MunicipalityId = Guid.Parse("2a8cbe9e-56b8-4b11-8672-8087f71e4228"),
 				Created = DateTime.Parse("17/6/2017")
 			};
@@ -101,9 +101,9 @@ namespace TaxScheduler.DataAccess.Migrations
 			{
 				Id = Guid.Parse("9dd6f1d2-a9ce-465f-a014-545f286e2e3f"),
 				Amount = 0.2,
-				Type = ScheduleType.Daily,
+				Type = ScheduleType.Yearly,
 				StartDate = DateTime.Parse("1/1/2016"),
-				EndDate = DateTime.Parse("1/12/2016"),
+				EndDate = DateTime.Parse("1/1/2017"),
 				MunicipalityId = Guid.Parse("2a8cbe9e-56b8-4b11-8672-8087f71e4228"),
 				Created = DateTime.Parse("17/6/2017")
 			};

@@ -19,7 +19,7 @@ namespace TaxScheduler.Services.Tax
 
 		public static DataAccess.Entities.Tax Map(this Tax entity)
 		{
-			var endDate = DateTime.Now;
+			var endDate = entity.Date;
 			switch (entity.Type)
 			{
 				case ScheduleType.Daily:
