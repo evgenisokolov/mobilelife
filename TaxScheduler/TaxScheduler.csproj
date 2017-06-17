@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ErrorHandling\CommonErrorHandler.cs" />
     <Compile Include="Filters\TaxFilter.cs" />
     <Compile Include="Validation\DateGreaterThanAttribute.cs" />
     <Compile Include="Controllers\MunicipalitiesController.cs" />
@@ -134,6 +135,10 @@
     <ProjectReference Include="..\TaxScheduler.Infrastructure.EntityFramework\TaxScheduler.Infrastructure.EntityFramework.csproj">
       <Project>{08AD0F62-0637-48BA-BCDC-8B7E68756A41}</Project>
       <Name>TaxScheduler.Infrastructure.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaxScheduler.Infrastructure\TaxScheduler.Infrastructure.csproj">
+      <Project>{909313FD-BC20-44B3-99C7-083EAC950D0B}</Project>
+      <Name>TaxScheduler.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\TaxScheduler.Services\TaxScheduler.Services.csproj">
       <Project>{ba7b74f3-f37c-4d97-aefd-070f8dd10b2e}</Project>

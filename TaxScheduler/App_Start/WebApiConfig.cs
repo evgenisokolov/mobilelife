@@ -1,10 +1,12 @@
 ﻿using System.Data.Entity;
 using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 using Newtonsoft.Json.Serialization;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
 using TaxScheduler.DataAccess;
 using TaxScheduler.DataAccess.Repositories;
+using TaxScheduler.ErrorHandling;
 using TaxScheduler.Services.Municipality;
 using TaxScheduler.Services.Tax;
 
@@ -38,7 +40,10 @@ namespace TaxScheduler
 			config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
 			config.Formatters.JsonFormatter.Indent = true;
 
+			//error handling
+			config.Services.Replace(typeof(IExceptionHandler), new CommonExceptionHandler());
 
+			//run seed method on app start
 			Database.SetInitializer(new MigrateDatabaseToLatestVersion<TaskSchedulerDataContext, TaxScheduler.DataAccess.Migrations.Configuration>());
 
 			// Web API routes
