@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxScheduler.Services", "Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxScheduler.DataAccess", "TaxScheduler.DataAccess\TaxScheduler.DataAccess.csproj", "{A7A48D39-82EC-484E-993A-042450F29716}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxScheduler.Infrastructure.EntityFramework", "TaxScheduler.Infrastructure.EntityFramework\TaxScheduler.Infrastructure.EntityFramework.csproj", "{08AD0F62-0637-48BA-BCDC-8B7E68756A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxScheduler.Infrastructure", "TaxScheduler.Infrastructure\TaxScheduler.Infrastructure.csproj", "{909313FD-BC20-44B3-99C7-083EAC950D0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{A7A48D39-82EC-484E-993A-042450F29716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7A48D39-82EC-484E-993A-042450F29716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7A48D39-82EC-484E-993A-042450F29716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AD0F62-0637-48BA-BCDC-8B7E68756A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AD0F62-0637-48BA-BCDC-8B7E68756A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AD0F62-0637-48BA-BCDC-8B7E68756A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AD0F62-0637-48BA-BCDC-8B7E68756A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{909313FD-BC20-44B3-99C7-083EAC950D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909313FD-BC20-44B3-99C7-083EAC950D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909313FD-BC20-44B3-99C7-083EAC950D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909313FD-BC20-44B3-99C7-083EAC950D0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
